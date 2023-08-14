@@ -35,8 +35,19 @@
 
   <!------------------ MAIN CONTENT ------------------------->
   <main class="main-content">
-    <div class="main-container container">
-      <div class="hero"></div>
+    <div class="container">
+        <form class="filters" action="http://echo.htmlacademy.ru" method="get">
+          <input class="filters__search" type="search" name="search" placeholder="Search for a country…" required aria-label="country name">
+          <select class="filters__region" name="region" aria-label="Regions">
+            <option selected disabled>Filter by Region</option>
+            <option>Africa</option>
+            <option>America</option>
+            <option>Asia</option>
+            <option>Europe</option>
+            <option>Oceania</option>
+          </select>
+        </form>
+      </div>
     </div>
   </main>
   <script src="js/main.js"></script>
