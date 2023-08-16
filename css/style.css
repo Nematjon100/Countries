@@ -3,7 +3,7 @@
   --body-bg: #fafafa;
   --element-bg: #fff;
   --text-color:#111517;
-
+  --transition-duration: 0.4s;
 }
 
 
@@ -70,7 +70,8 @@ body {
   font-weight: 300;
   background-color: var(--body-bg);
   color: var(--text-color);
-  transition: background-color 0.4s ease, color 0.4s ease;
+  transition: background-color var(--transition-duration) ease,
+  color var(--transition-duration) ease;
 }
 
 img {
@@ -126,7 +127,7 @@ a {
   line-height: normal;
   font-weight: 800;
   color: var(--text-color);
-  transition: color 0.4s ease;
+  transition: color var(--transition-duration) ease;
 }
 
 .header__logo:hover {
@@ -168,11 +169,15 @@ a {
   font-weight: 600;
 }
 
-/* MAIN-CONTENT */
+/*----------------------- MAIN-CONTENT ------------------------*/
 .main-content {
   flex-grow: 1;
   padding-top: 48px;
   padding-bottom: 48px;
+}
+
+.main-content__inner {
+  padding-top: 80px;
 }
 
 .filters {
@@ -194,7 +199,7 @@ a {
 
 ::placeholder {
   color: var(--text-color);
-  transition: color 0.5s ease;
+  transition: color var(--transition-duration) ease;
 }
 
 .filters__region {
@@ -205,13 +210,12 @@ a {
   background-color: var(--body-bg);
   color: var(--text-color);
   box-shadow: 0 2px 9px  rgba(0, 0, 0, 0.06);
-  transition: color 0.5s ease;
+  transition: color var(--transition-duration) ease;
 }
 
 
 /* INDEX-COUNTRIES */
-.countries {
-}
+
 .countries__list {
   display: flex;
   flex-wrap: wrap;
@@ -280,7 +284,148 @@ a {
   margin-left: 4px;
 }
 
+/* -------COUNTRY PAGE -------------------- */
+.country-page__back-wrapper {
+  margin-bottom: 80px;
+}
 
+.country-page__back-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 40px;
+  border-radius: 6px;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.country-page__back-link:hover {
+  opacity: 0.8;
+}
+
+.country-page__back-link:active {
+  opacity: 0.6;
+}
+
+.back-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: auto;
+}
+
+.back-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+
+/* -----------COUNTR-PAGE-FLAG-INFO--------------- */
+.country-page__flag-info {
+  display: flex;
+}
+
+.country-page__flag {
+  width: 560px;
+  height: 400px;
+  margin-right: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.country-page__info {
+  width: 600px;
+  padding-top: 40px;
+}
+
+.country-page__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: normal;
+  font-weight: 800;
+  color: var(--text-color);
+}
+
+.country-page__dls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.country-page__details:first-child {
+  width: 230px;
+}
+
+.country-page__details:last-child {
+  width: 300px;
+}
+
+.country-page__item {
+  display: flex;
+  align-items: center;
+}
+
+.country-page__item:not(:last-child){
+  margin-bottom: 12px;
+}
+
+.country-page__details-title {
+  margin-right: 5px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.country-page__details-value {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* <!-- COUNTRY PAGE Border-Countries --> */
+.country-page__border-countries {
+  display: flex;
+  align-items: center;
+}
+
+.country-page__border-heading {
+  margin: 0;
+  margin-right: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.country-page__border-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.country-page__border-link:not(:last-child) {
+  margin-right: 10px;
+}
+
+.country-page__border-link {
+  min-width: 96px;
+  padding: 5px 10px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--element-bg);
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.11);
+  transition: background-color var(--transition-duration) ease,
+  color var(--transition-duration) ease;
+}
+
+.country-page__border-link:hover {
+  opacity: 0.8;
+}
+
+.country-page__border-link:active {
+  opacity: 0.6;
+}
 
 /* -------------------------RETINA DISPLAY------------------------ */
 @media

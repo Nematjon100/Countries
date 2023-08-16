@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+
+  <!-- ---------------Google Fonts------------------------------>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!------------------ STYLESHEETS --------------------------------->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo" href="index.html">Where in the world?</a>
+        <button class="theme-toggler" type="button">
+          <span class="theme-toggler__inner">
+            <svg class="theme-toggler__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5532 13.815C9.66857 13.815 6.51929 10.9278 6.51929 7.36821C6.51929 6.0253 6.96679 4.78158 7.73143 3.75C4.69036 4.69515 2.5 7.33122 2.5 10.4381C2.5 14.3385 5.94929 17.5 10.2036 17.5C13.5929 17.5 16.4696 15.4932 17.5 12.7045C16.375 13.4048 15.0161 13.815 13.5532 13.815Z" fill="white" stroke="currentColor" stroke-width="1.25"/>
+              </svg>
+            <span class="theme-toggler__text">Dark Mode</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!------------------ MAIN CONTENT ------------------------->
+  <main class="main-content main-content__inner country-page">
+    <div class="container">
+      <div class="country-page__back-wrapper">
+        <a class="country-page__back-link" href="index.html">
+          <svg class="back-icon" xmlns="http://www.w3.org/2000/svg" width="19" height="12"><path fill="currentColor" fill-rule="evenodd" d="m6.464.107 1.179 1.179-3.89 3.889h14.85v1.65H3.753l3.89 3.889-1.179 1.179L.572 6 6.464.107Z" clip-rule="evenodd"/></svg>
+          <span class="back-text">Back</span>
+        </a>
+      </div>
+
+      <!-- COUNTRY PAGE FLAG-INFO -->
+      <div class="country-page__flag-info">
+        <img class="country-page__flag" src="img/belgium.jpg" alt="belgium flag" width="560" height="400" srcset="img/belgium.jpg 1x, img/belgium@2x.jpg 2x">
+        <div class="country-page__info">
+          <h1 class="country-page__title">
+            Belgium
+          </h1>
+          <div class="country-page__dls-wrapper">
+            <dl class="country-page__details">
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Native Name:</dt>
+                <dd class="country-page__details-value">België</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Population:</dt>
+                <dd class="country-page__details-value">11,319,511</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Region:</dt>
+                <dd class="country-page__details-value">Europe</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Sub Region: </dt>
+                <dd class="country-page__details-value">Western Europe</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Capital:</dt>
+                <dd class="country-page__details-value">Brussels</dd>
+              </div>
+            </dl>
+
+            <dl class="country-page__details">
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Top Level Domain:</dt>
+                <dd class="country-page__details-value">.be</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Currencies:</dt>
+                <dd class="country-page__details-value">Euro</dd>
+              </div>
+              <div class="country-page__item">
+                <dt class="country-page__details-title">Languages:</dt>
+                <dd class="country-page__details-value">Dutch, French, German</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- COUNTRY PAGE Border-Countries -->
+          <section class="country-page__border-countries">
+            <h2 class="country-page__border-heading">Border Countries:</h2>
+            <div class="country-page__border-list">
+              <a class="country-page__border-link" href="#">France</a>
+              <a class="country-page__border-link" href="#">Germany</a>
+              <a class="country-page__border-link" href="#">Netherlands</a>
+            </div>
+          </section>
+        </div>
+      </div>
+      </div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>
